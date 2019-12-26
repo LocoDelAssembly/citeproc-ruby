@@ -36,7 +36,7 @@ module CiteProc
 
           case
           when node.variable == 'page'
-            format_page_range!(text, node.page_range_format)
+            format_page_range(text, node.page_range_format)
 
           when node.variable == 'page-first' && text.empty?
             text = item.data[:'page'].to_s[/\d+/].to_s

@@ -15,7 +15,7 @@ module CiteProc
         when node.page?
           value, name = item.read_attribute(:page) || item.data.unobservable_read_attribute(:page).to_s, :page
 
-          format_page_range!(value, node.page_range_format)
+          format_page_range(value, node.page_range_format)
 
         when node.locator?
 
